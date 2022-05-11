@@ -1,0 +1,63 @@
+header{
+    width: 600px;
+    margin:0 auto;   /*先上下 後左右置中的縮寫語法*/
+    }
+    
+    header h1{
+    display:block;   /*可省略*/
+    width:960px;
+    height: 300px;
+    background-image: url(img/E-183459-C8E022B5.jpg.png);
+    text-indent:-9999pxi   /*用法一:隱藏文字時*/
+    }
+    
+    nav   a  {
+        color: inherit; /* 移除超連結顏色 */
+        display: block; /* 讓 <a> 填滿 <li> */
+        text-decoration: none;  /* 移除超連結底線 */
+        font-size: 1.2rem; 
+        padding: 10px; /* 調整間距 */
+                               }
+
+    nav > ul {
+        list-style: none;   /* 移除項目符號 */
+        background-color: rgb(230, 230, 230);
+       
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: space-evenly;
+    }
+    nav li:hover { /* 滑鼠移到 <a> 時變成深底淺色 */
+        background-color: rgb(115, 115, 115);
+         color: white;
+        
+
+    }
+    
+  
+       
+   body{
+    clear:both;   /* 解除浮動 */
+    width:960px;   /*不必預設高度,用文字段落去調整高度即可*/
+    margin:0 auto;
+    background-color: beige;
+    padding-top:30px;   /*內容區與上方選單區之間的間隔設定*/
+    padding-bottom: 30px;   /*內容區與下方頁尾區之間的間隔定*/
+}
+
+body{
+  
+    font-size:15px;
+    line-height:1.7;
+    padding:0 30px;   /*左右各留 30px,編排上視覺較舒服太*/
+    padding-bottom : 15px;   /*不同段落之間作區隔*/
+}
+
+body{
+    color:#1F2331;
+}
+
+    
+   
+    
