@@ -1,3 +1,4 @@
+
 header{
     width: 600px;
     margin:0 auto;   /*先上下 後左右置中的縮寫語法*/
@@ -7,7 +8,7 @@ header{
     display:block;   /*可省略*/
     width:960px;
     height: 300px;
-    background-image: url(img/E-183459-C8E022B5.jpg.png);
+    
     text-indent:-9999pxi   /*用法一:隱藏文字時*/
     }
     
@@ -38,6 +39,8 @@ header{
   
        
    body{
+    background-image: url("img/背景圖.png");
+    background-size: 30%;
     clear:both;   /* 解除浮動 */
     width:960px;   /*不必預設高度,用文字段落去調整高度即可*/
     margin:0 auto;
