@@ -11,6 +11,10 @@ header{
     
     text-indent:-9999pxi   /*用法一:隱藏文字時*/
     }
+
+  .welcome img{
+    width: 220px;
+  }
     
     nav   a  {
         color: inherit; /* 移除超連結顏色 */
@@ -22,7 +26,7 @@ header{
 
     nav > ul {
         list-style: none;   /* 移除項目符號 */
-        background-color: rgb(230, 230, 230);
+        background-color:#D6DCDB;
        
         margin: 0;
         padding: 0;
@@ -30,7 +34,7 @@ header{
         justify-content: space-evenly;
     }
     nav li:hover { /* 滑鼠移到 <a> 時變成深底淺色 */
-        background-color: rgb(115, 115, 115);
+        background-color: #82898D;
          color: white;
         
 
@@ -79,25 +83,181 @@ header{
    body{
     background-image: url("img/背景圖.png");
     background-size: 30%;
-    clear:both;   /* 解除浮動 */
-    width:960px;   /*不必預設高度,用文字段落去調整高度即可*/
-    margin:0 auto;
+    clear: both;   /* 解除浮動 */
+    width: 960px;   /*不必預設高度,用文字段落去調整高度即可*/
+    margin: 0 auto;
     background-color: beige;
-    padding-top:30px;   /*內容區與上方選單區之間的間隔設定*/
+    padding-top: 30px;   /*內容區與上方選單區之間的間隔設定*/
     padding-bottom: 30px;   /*內容區與下方頁尾區之間的間隔定*/
 }
 
 body{
-  
-    font-size:15px;
-    line-height:1.7;
-    padding:0 30px;   /*左右各留 30px,編排上視覺較舒服太*/
+    font-size: 15px;
+    line-height: 1.7;
+    padding: 0 30px;   /*左右各留 30px,編排上視覺較舒服太*/
     padding-bottom : 15px;   /*不同段落之間作區隔*/
 }
 
-body{
-    color:#1F2331;
+/*標題*/
+
+.loader{
+  position: relative;
+  width: 100%;
+  height: 60px;
+  left: 25px;
+  border: 1px soild red;
+
 }
+
+.loader span{
+  position: absolute;
+  width: 50px;
+  height: 170px;
+  line-height: 60px;
+  margin: 0 10px;
+  color: #8C736F;
+  text-align: center;
+  font-size: 40px;
+  transform: rotate(180deg);
+  opacity: 0;
+  animation: move 3.5s linear infinite;
+}
+
+
+
+.loader span:nth-child(2){
+  animation-delay: 0.15s;
+  color: #D4B8B4;
+}
+.loader span:nth-child(3){
+  animation-delay: 0.3s;
+  color: #ADAAA5;
+}
+.loader span:nth-child(4){
+  animation-delay: 0.45s;
+  color: #B7B7BD;
+}
+.loader span:nth-child(5){
+  animation-delay: 0.6s;
+  color: #AAB8AB;
+}
+.loader span:nth-child(6){
+  animation-delay: 0.75s;
+  color: #DDD0C8;
+}
+.loader span:nth-child(7){
+  animation-delay: 0.9s;
+  color: #A08887;
+}
+.loader span:nth-child(8){
+  animation-delay: 1.05s;
+  color: #E2C6C4;
+}
+.loader span:nth-child(9){
+  animation-delay: 1.2s;
+  color: #B1ACB3;
+}
+.loader span:nth-child(10){
+  animation-delay: 1.35s;
+  color: #53565C;
+}
+.loader span:nth-child(11){
+  animation-delay: 1.5s;
+  color: #95A098;
+}
+.loader span:nth-child(12){
+  animation-delay: 1.65s;
+  color: #C1B0A7;
+}
+.loader span:nth-child(13){
+  animation-delay: 1.8s;
+  color: #C3AAA6;
+}
+.loader span:nth-child(14){
+  animation-delay: 1.95s;
+  color: #D8C6BA;
+}
+.loader span:nth-child(15){
+  animation-delay: 2.1s;
+  color: #C4C1BC;
+}
+.loader span:nth-child(16){
+  animation-delay: 2.25s;
+  color: #60656C;
+}
+.loader span:nth-child(17){
+  animation-delay: 2.4s;
+  color: #728A7A;
+}
+.loader span:nth-child(18){
+  animation-delay: 2.55s;
+  color: #D4C3AA;
+}
+.loader span:nth-child(19){
+  animation-delay: 2.7s;
+  color: #A39183;
+}
+
+
+
+@keyframes move{
+  0%{
+    right: 0;
+    opacity: 0;
+  }
+  35%{
+    right: 41%;
+    transform: rotate(0deg);
+    opacity: 1;
+  }
+  65%{
+    right: 59%;
+    transform: rotate(0deg);
+    opacity: 1;
+  }
+  100%{
+    right: 100%;
+    transform: rotate(-180deg);
+    opacity: 0;
+  }
+}
+
+/*手風琴*/
+.accordion2  {
+  width : 900px;
+  margin : 100px auto 0;
+}
+
+.accordion2  label {
+  display : block;
+  width : 100%;
+  text-align : center;
+  border-radius : 5px;
+  background-color : #F3F4D5;
+  margin-top : 10px;
+  padding : 6px 12px;
+  cursor : pointer;
+}
+
+.content3 {
+  height : 0px;
+  background-color : #fff;
+  overflow : hidden;
+  transition : 0.5s;
+}
+
+input[type=radio]:checked + .content3 {
+  height : 150px;
+  padding: 0 20px;
+  overflow: auto;
+  overflow-x: hidden;
+}
+
+input[type=radio] {
+  display : none;
+}
+
+/*食譜卡片*/
 
 @import url("https://fonts.googleapis.com/css?family=Cardo:400i|Rubik:400,700&display=swap");
 :root {
@@ -296,7 +456,7 @@ html, body {
 }
 
 .card .title {
-  color:#444444;
+  color:#EEF1EA;
 }
 
 .card .text {
@@ -307,47 +467,200 @@ html, body {
   border-top:none !important;
   background-color:transparent !important;
 } 
-   
- /* 做菜裡面的卡片 */
  
- .card1 {
-    border: none !important;
-    padding:10px;
+
+
+  /* 卡片 */
+
+  .container2{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 30px;
   }
-  
-  .card1 .pic{
-    height: 100%;
+
+  .container2 .card2{
+    position: relative;
+    width: 290px;
+    height: 215px;
+    background-color: #fff;
+    margin: 30px 40px;
+    padding: 20px 15px;
+    border-radius: 5px;
+    box-shadow: 0 5px 200px rgba(0,0,0,0.5);
+    transition: 0.3s ease-in-out;
   }
-  
-  .card1 .pic img {
+
+  .container2 .card2:hover{
+    height: 500px;
+  }
+
+  .container2 .card2 .img-box{
+    position: relative;
+    width: 260px;
+    height: 260px;
+    border-radius: 5px;
+    overflow: hidden;
+    top: -60px;
+    
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+
+  .container2 .card2 .img-box img{
     width: 100%;
-    height: 100%;
-    object-fit: cover;
+  }
+
+  .container2 .card2 .text-box{
+    position: relative;
+    margin-top: -140px;
+    padding: 10px 15px;
+    text-align: center;
+    color: #111;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.2s ease-in-out;
+  }
+
+  .text-box a{
+  color: inherit; /* 移除超連結顏色 */
+  text-decoration: none;  /* 移除超連結底線 */
+  }
+
+  .text-box h2{
+    color: #D4C3AA;
+  }
+
+  .text-box p{
+    overflow-y:auto;
+    width: 100%;
+    height: 150px;
+
+  }
+
+  .container2 .card2 .text-box p{
+    text-align: left;
+    line-height: 25px;
+    margin-top: 10px;
+    font-size: 15px;
+    color: #60656C;
+    
+  }
+
+  .container2 .card2:hover .text-box{
+  visibility: visible;
+  opacity: 1;
+  margin-top: -40px;
+  transition: 0.2s ;
+  }
+
+  /* 點擊彈出視窗*/
+  .black_overlay{ 
+    display: none; 
+    position: absolute; 
+    top: -100%; 
+    left: -130%; 
+    width: 115%; 
+    height: 200%; 
+    background-color: #D4C3AA; 
+    z-index:1001; 
+    -moz-opacity: 0.8; 
+    opacity:.80; 
+    filter: alpha(opacity=88); 
+} 
+.white_content { 
+    display: none; 
+    position: absolute; 
+    top: -95%; 
+    left: -125%; 
+    width: 105%; 
+    height: 190%; 
+    padding: 20px;  
+    background-color: white; 
+    z-index:1002; 
+    overflow: auto; 
+    text-align: left;
+    color: #60656C;
+} 
+
+.black_overlay2{ 
+  display: none; 
+  position: absolute; 
+  top: -100%; 
+  left: -130%; 
+  width: 115%; 
+  height: 200%; 
+  background-color: #D4C3AA; 
+  z-index:1001; 
+  -moz-opacity: 0.8; 
+  opacity:.80; 
+  filter: alpha(opacity=88); 
+} 
+.white_content2 { 
+  display: none; 
+  position: absolute; 
+  top: -95%; 
+  left: -125%; 
+  width: 105%; 
+  height: 190%; 
+  padding: 20px;  
+  background-color: white; 
+  z-index:1002; 
+  overflow: auto; 
+  text-align: left;
+  color: #60656C;
+  }
+
+  /*買菜照片輪播*/
+
+  .box1 li{
+    list-style: none;
+    float: left;
+    width: 100px;
+    height: 500px;
+    transition: all 0.3s;
+    
   }
   
-  .card1 .card1-header{
-    border-bottom:none;
-    background-color:#f1f6fa;
+  .box1{
+    width: 1000px;
+    height: 600px;
+    margin: 50px auto;
+    overflow: hidden;
+    transition: all 0.3s;
   }
   
-  .card1 .card1-body{
-    background-color:#f1f6fa !important;
+  .box1 li .text1{
+    position: relative;
+    left:0;
+    bottom: 0;
+    font-size: 20px;
+    color:#60656C;
+    width: 100%;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
   }
   
-  .card1 .title {
-    color:#444444;
+  .box1:hover li{
+    width: 60px;
   }
   
-  .card1 .text {
-    color:#444444;
+  .box1 li:hover{
+    width: 300px;
   }
   
-  .card1-footer{
-    border-top:none !important;
-    margin-top: auto !important;
-    background-color:#f1f6fa !important;
-  } 
-  
-  .card1-footer p{
-    margin-bottom:0;
+  .box1 li img{
+    width: 300px;
   }
+  
+  .box1 li a{
+    color: inherit; /* 移除超連結顏色 */
+    text-decoration: none;  /* 移除超連結底線 */
+  }
+
+  
+  
+ 
